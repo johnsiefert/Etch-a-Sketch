@@ -1,10 +1,24 @@
 const container = document.getElementById('container');
+const slider = document.getElementById("slider");
 
-function makeDivs(numDivs) {
-for (let d = 0; d < numDivs; d++){
-    let cells = document.createElement('div');
-    container.appendChild(cells)
-    }
+slider.addEventListener("click", () => { //
+    let squares = slider.value;
+    container.innerHTML = "";
+   container.style.gridTemplateRows = `repeat(${squares}, 1fr)`;
+   container.style.gridTemplateColumns = `repeat(${squares}, 1fr)`;
+
+    for (let i = 0; i < (squares * squares); i++) {
+        let square = document.createElement('div');
+        square.classList.add("square");
+        container.appendChild(square);
     }
 
-makeDivs(256);
+    const gridCells = document.querySelectorAll(".square");
+
+    gridCells.forEach(cell => {
+            cell.addEventListener("mouseover", () => {
+            cell.classList.add("hov-square");
+        });
+    });
+
+});

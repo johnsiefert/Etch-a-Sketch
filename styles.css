@@ -1,22 +1,33 @@
 body {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
 
 
 #container {
+    width: 800px;
+    height: 800px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    width: 560px;
-    height: 560px;
-    border: 3px solid black;
-    text-align: center;
-    }
+    border-color: black;
+}
 
-    #container > div {
-    width: 30px;
-    height: 30px;
-    border: 1px solid gray;
-    }
+.square {
+    border: 1px solid rgb(66, 66, 66);
+}
+
+.hov-square{
+    background-color: black;
+}
