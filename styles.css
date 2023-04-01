@@ -29,36 +29,8 @@ body {
     border: 1px solid rgb(66, 66, 66);
 }
 
-.hov-square{
+.black{
     background-color: black;
 }
-.erase{
-    background-color: white;
-}
 
-
-.red{
-    background-color: red;
-}
-.orange{
-    background-color: orange
-
-}
-.yellow{
-    background-color: yellow;
-}
-.green{
-    background-color: green;
-}
-
-.blue{
-    background-color: blue
-
-}
-.indigo{
-    background-color: indigo;
-}
-.violet{
-    background-color: violet;
-}
 

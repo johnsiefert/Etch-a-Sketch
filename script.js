@@ -1,6 +1,5 @@
 const container = document.getElementById('container');
 const slider = document.getElementById("slider");
-const gridValue = document.getElementById("grid-value")
 const rainbow = document.getElementById("rainbow")
 const eraser = document.getElementById("erase")
 
@@ -20,7 +19,7 @@ slider.addEventListener("click", () => { //
 
     gridCells.forEach(cell => {
             cell.addEventListener("mouseover", () => {
-            cell.classList.add("hov-square");
+            cell.classList.add("black");
         });
     });
 
@@ -28,7 +27,6 @@ slider.addEventListener("click", () => { //
 
 rainbow.addEventListener("click", () => {
     const gridCells = document.querySelectorAll(".square");
-
     gridCells.forEach(cell => {
         let color = ["red", "orange", "yellow","green", "blue", "indigo", "violet"];
             cell.addEventListener("mouseover", () => {
