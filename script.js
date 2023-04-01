@@ -1,5 +1,8 @@
 const container = document.getElementById('container');
 const slider = document.getElementById("slider");
+const gridValue = document.getElementById("grid-value")
+const rainbow = document.getElementById("rainbow")
+const eraser = document.getElementById("erase")
 
 slider.addEventListener("click", () => { //
     let squares = slider.value;
@@ -22,3 +25,14 @@ slider.addEventListener("click", () => { //
     });
 
 });
+
+rainbow.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".square");
+
+    gridCells.forEach(cell => {
+        let color = ["red", "orange", "yellow","green", "blue", "indigo", "violet"];
+            cell.addEventListener("mouseover", () => {
+                cell.style.background = color[Math.floor(Math.random() * color.length)];
+        });
+    });
+})
