@@ -1,7 +1,29 @@
 const container = document.getElementById('container');
 const slider = document.getElementById("slider");
 const rainbow = document.getElementById("rainbow")
-const eraser = document.getElementById("erase")
+const pen = document.getElementById("pencil")
+const eraser = document.getElementById("whiteout")
+
+
+pen.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".square");
+    gridCells.forEach(cell => {
+            cell.addEventListener("mouseover", () => {
+            cell.classList.add("black");
+        });
+    });
+
+});
+
+eraser.addEventListener("click", () => {
+    const gridCells = document.querySelectorAll(".square");
+    gridCells.forEach(cell => {
+            cell.addEventListener("mouseover", () => {
+            cell.classList.add("white");
+        });
+    });
+
+})
 
 slider.addEventListener("click", () => { //
     let squares = slider.value;
@@ -14,14 +36,6 @@ slider.addEventListener("click", () => { //
         square.classList.add("square");
         container.appendChild(square);
     }
-
-    const gridCells = document.querySelectorAll(".square");
-
-    gridCells.forEach(cell => {
-            cell.addEventListener("mouseover", () => {
-            cell.classList.add("black");
-        });
-    });
 
 });
 
