@@ -4,27 +4,6 @@ const rainbow = document.getElementById("rainbow")
 const pen = document.getElementById("pencil")
 const eraser = document.getElementById("whiteout")
 
-
-pen.addEventListener("click", () => {
-    const gridCells = document.querySelectorAll(".square");
-    gridCells.forEach(cell => {
-            cell.addEventListener("mouseover", () => {
-            cell.classList.add("black");
-        });
-    });
-
-});
-
-eraser.addEventListener("click", () => {
-    const gridCells = document.querySelectorAll(".square");
-    gridCells.forEach(cell => {
-            cell.addEventListener("mouseover", () => {
-            cell.classList.add("white");
-        });
-    });
-
-})
-
 slider.addEventListener("click", () => { //
     let squares = slider.value;
     container.innerHTML = "";
@@ -36,15 +15,48 @@ slider.addEventListener("click", () => { //
         square.classList.add("square");
         container.appendChild(square);
     }
+});
+
+
+
+pen.addEventListener("click", () => {
+      const gridCells = document.querySelectorAll(".square");
+    gridCells.forEach(cell => {
+            cell.addEventListener("mouseover", () => {
+                cell.classList.remove("rainbow");
+                cell.classList.remove("white");
+                cell.classList.add("black");
+        });
+
+    });
 
 });
 
-rainbow.addEventListener("click", () => {
+eraser.addEventListener("click", () =>{
+    const gridCells = document.querySelectorAll(".square");
+    gridCells.forEach(cell => {
+            cell.addEventListener("mouseover", () => {
+                cell.classList.remove("rainbow");
+                cell.classList.remove("black");
+                cell.classList.add("white");
+        });
+    });
+});
+
+rainbow.addEventListener("click", ()=> {
     const gridCells = document.querySelectorAll(".square");
     gridCells.forEach(cell => {
         let color = ["red", "orange", "yellow","green", "blue", "indigo", "violet"];
             cell.addEventListener("mouseover", () => {
                 cell.style.background = color[Math.floor(Math.random() * color.length)];
+
         });
     });
 })
+
+
+
+
+
+
+
