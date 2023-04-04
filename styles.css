@@ -4,6 +4,8 @@ body {
     min-height: 100vh;
 
 }
+
+
 h1 {
     text-align: center;
 }
@@ -53,6 +55,8 @@ padding: 10px;
 .white{
     background-color: white;
 }
+
+/* Rainbow colors */
 .red{
     background-color: red;
 
@@ -76,6 +80,8 @@ padding: 10px;
     background-color: indigo;
 }
 
+
+/* button colors */
 .btn {
     background: #3498db;
     background-image: -webkit-linear-gradient(top, #3498db, #b1b82b);
