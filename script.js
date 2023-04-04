@@ -23,8 +23,8 @@ pen.addEventListener("click", () => {
       const gridCells = document.querySelectorAll(".square");
     gridCells.forEach(cell => {
             cell.addEventListener("mouseover", () => {
-                cell.classList.remove("rainbow");
                 cell.classList.remove("white");
+                cell.classList.remove("red", "orange", "yellow","green", "blue", "indigo", "violet")
                 cell.classList.add("black");
         });
 
@@ -36,8 +36,8 @@ eraser.addEventListener("click", () =>{
     const gridCells = document.querySelectorAll(".square");
     gridCells.forEach(cell => {
             cell.addEventListener("mouseover", () => {
-                cell.classList.remove("rainbow");
                 cell.classList.remove("black");
+                cell.classList.remove("red", "orange", "yellow","green", "blue", "indigo", "violet")
                 cell.classList.add("white");
         });
     });
@@ -48,7 +48,8 @@ rainbow.addEventListener("click", ()=> {
     gridCells.forEach(cell => {
         let color = ["red", "orange", "yellow","green", "blue", "indigo", "violet"];
             cell.addEventListener("mouseover", () => {
-                cell.style.background = color[Math.floor(Math.random() * color.length)];
+
+                cell.classList.add(color[Math.floor(Math.random() * color.length)]);
 
         });
     });

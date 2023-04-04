@@ -53,6 +53,28 @@ padding: 10px;
 .white{
     background-color: white;
 }
+.red{
+    background-color: red;
+
+}
+.yellow {
+    background-color: yellow;
+}
+.orange {
+    background-color: orange;
+}
+.green {
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.violet {
+    background-color: violet;
+}
+.indigo {
+    background-color: indigo;
+}
 
 .btn {
     background: #3498db;
@@ -133,6 +155,6 @@ padding: 10px;
     background-image: linear-gradient(to bottom, #000000, #000000);
     text-decoration: none;
   }
- 
+
 
 
